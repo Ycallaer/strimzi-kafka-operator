@@ -32,7 +32,7 @@ import io.fabric8.kubernetes.api.model.networking.v1.NetworkPolicyIngressRule;
 import io.fabric8.kubernetes.api.model.networking.v1.NetworkPolicyIngressRuleBuilder;
 import io.fabric8.kubernetes.api.model.networking.v1.NetworkPolicyPeer;
 import io.fabric8.kubernetes.api.model.networking.v1.NetworkPolicyPeerBuilder;
-import io.fabric8.kubernetes.api.model.policy.v1beta1.PodDisruptionBudget;
+//import io.fabric8.kubernetes.api.model.policy.v1.PodDisruptionBudget;
 import io.fabric8.kubernetes.api.model.rbac.ClusterRoleBinding;
 import io.fabric8.kubernetes.api.model.rbac.RoleRef;
 import io.fabric8.kubernetes.api.model.rbac.RoleRefBuilder;
@@ -294,8 +294,9 @@ public class KafkaConnectCluster extends AbstractModel {
                 kafkaConnect.templateJmxSecretLabels = template.getJmxSecret().getMetadata().getLabels();
                 kafkaConnect.templateJmxSecretAnnotations = template.getJmxSecret().getMetadata().getAnnotations();
             }
-
-            ModelUtils.parsePodDisruptionBudgetTemplate(kafkaConnect, template.getPodDisruptionBudget());
+            LOGGER.warnCr(reconciliation, "call before");
+            //ModelUtils.parsePodDisruptionBudgetTemplate(kafkaConnect, template.getPodDisruptionBudget());
+            LOGGER.warnCr(reconciliation, "call after");
         }
 
         if (spec.getExternalConfiguration() != null)    {
@@ -675,9 +676,11 @@ public class KafkaConnectCluster extends AbstractModel {
      *
      * @return The PodDisruptionBudget.
      */
+/*
     public PodDisruptionBudget generatePodDisruptionBudget() {
         return createPodDisruptionBudget();
     }
+*/
 
     @Override
     public String getServiceAccountName() {

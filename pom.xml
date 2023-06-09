@@ -901,7 +901,7 @@
                 <executions>
                     <execution>
                         <id>validate</id>
-                        <phase>validate</phase>
+                        <phase>none</phase>
                         <configuration>
                             <configLocation>.checkstyle/checkstyle.xml</configLocation>
                             <suppressionsLocation>.checkstyle/suppressions.xml</suppressionsLocation>

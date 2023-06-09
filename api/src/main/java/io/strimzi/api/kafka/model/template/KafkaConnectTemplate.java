@@ -24,7 +24,8 @@ import java.util.Map;
         builderPackage = Constants.FABRIC8_KUBERNETES_API
 )
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({"deployment", "pod", "apiService", "connectContainer", "initContainer", "podDisruptionBudget",
+@JsonPropertyOrder({"deployment", "pod", "apiService", "connectContainer", "initContainer",
+        //"podDisruptionBudget",
     "serviceAccount", "clusterRoleBinding", "buildPod", "buildContainer", "buildConfig", "buildServiceAccount", "jmxSecret"})
 @EqualsAndHashCode
 public class KafkaConnectTemplate implements Serializable, UnknownPropertyPreserving {
@@ -34,7 +35,7 @@ public class KafkaConnectTemplate implements Serializable, UnknownPropertyPreser
     private PodTemplate pod;
     private PodTemplate buildPod;
     private InternalServiceTemplate apiService;
-    private PodDisruptionBudgetTemplate podDisruptionBudget;
+    //private PodDisruptionBudgetTemplate podDisruptionBudget;
     private ContainerTemplate connectContainer;
     private ContainerTemplate initContainer;
     private ContainerTemplate buildContainer;
@@ -86,7 +87,7 @@ public class KafkaConnectTemplate implements Serializable, UnknownPropertyPreser
         this.apiService = apiService;
     }
 
-    @Description("Template for Kafka Connect `PodDisruptionBudget`.")
+/*    @Description("Template for Kafka Connect `PodDisruptionBudget`.")
     @JsonInclude(JsonInclude.Include.NON_EMPTY)
     public PodDisruptionBudgetTemplate getPodDisruptionBudget() {
         return podDisruptionBudget;
@@ -94,7 +95,7 @@ public class KafkaConnectTemplate implements Serializable, UnknownPropertyPreser
 
     public void setPodDisruptionBudget(PodDisruptionBudgetTemplate podDisruptionBudget) {
         this.podDisruptionBudget = podDisruptionBudget;
-    }
+    }*/
 
     @Description("Template for the Kafka Connect container")
     @JsonInclude(JsonInclude.Include.NON_EMPTY)

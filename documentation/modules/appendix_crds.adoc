@@ -944,7 +944,7 @@ Used in: xref:type-CruiseControlTemplate-{context}[`CruiseControlTemplate`], xre
 [id='type-PodDisruptionBudgetTemplate-{context}']
 ### `PodDisruptionBudgetTemplate` schema reference
 
-Used in: xref:type-CruiseControlTemplate-{context}[`CruiseControlTemplate`], xref:type-KafkaBridgeTemplate-{context}[`KafkaBridgeTemplate`], xref:type-KafkaClusterTemplate-{context}[`KafkaClusterTemplate`], xref:type-KafkaConnectTemplate-{context}[`KafkaConnectTemplate`], xref:type-KafkaMirrorMakerTemplate-{context}[`KafkaMirrorMakerTemplate`], xref:type-ZookeeperClusterTemplate-{context}[`ZookeeperClusterTemplate`]
+Used in: xref:type-CruiseControlTemplate-{context}[`CruiseControlTemplate`], xref:type-KafkaBridgeTemplate-{context}[`KafkaBridgeTemplate`], xref:type-KafkaClusterTemplate-{context}[`KafkaClusterTemplate`], xref:type-KafkaMirrorMakerTemplate-{context}[`KafkaMirrorMakerTemplate`], xref:type-ZookeeperClusterTemplate-{context}[`ZookeeperClusterTemplate`]
 
 xref:type-PodDisruptionBudgetTemplate-schema-{context}[Full list of `PodDisruptionBudgetTemplate` schema properties]
 
@@ -1824,8 +1824,6 @@ Used in: xref:type-KafkaConnectSpec-{context}[`KafkaConnectSpec`], xref:type-Kaf
 |xref:type-ContainerTemplate-{context}[`ContainerTemplate`]
 |initContainer        1.2+<.<a|Template for the Kafka init container.
 |xref:type-ContainerTemplate-{context}[`ContainerTemplate`]
-|podDisruptionBudget  1.2+<.<a|Template for Kafka Connect `PodDisruptionBudget`.
-|xref:type-PodDisruptionBudgetTemplate-{context}[`PodDisruptionBudgetTemplate`]
 |serviceAccount       1.2+<.<a|Template for the Kafka Connect service account.
 |xref:type-ResourceTemplate-{context}[`ResourceTemplate`]
 |clusterRoleBinding   1.2+<.<a|Template for the Kafka Connect ClusterRoleBinding.

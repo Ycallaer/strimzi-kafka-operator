@@ -38,7 +38,7 @@ import io.strimzi.operator.common.operator.resource.IngressOperator;
 import io.strimzi.operator.common.operator.resource.IngressV1Beta1Operator;
 import io.strimzi.operator.common.operator.resource.NetworkPolicyOperator;
 import io.strimzi.operator.common.operator.resource.NodeOperator;
-import io.strimzi.operator.common.operator.resource.PodDisruptionBudgetOperator;
+//import io.strimzi.operator.common.operator.resource.PodDisruptionBudgetOperator;
 import io.strimzi.operator.common.operator.resource.PodOperator;
 import io.strimzi.operator.common.operator.resource.PvcOperator;
 import io.strimzi.operator.common.operator.resource.RoleBindingOperator;
@@ -75,7 +75,7 @@ public class ResourceOperatorSupplier {
     public final CrdOperator<KubernetesClient, KafkaRebalance, KafkaRebalanceList> kafkaRebalanceOperator;
     public final CrdOperator<KubernetesClient, StrimziPodSet, StrimziPodSetList> strimziPodSetOperator;
     public final NetworkPolicyOperator networkPolicyOperator;
-    public final PodDisruptionBudgetOperator podDisruptionBudgetOperator;
+    //public final PodDisruptionBudgetOperator podDisruptionBudgetOperator;
     public final PodOperator podOperations;
     public final IngressOperator ingressOperations;
     public final IngressV1Beta1Operator ingressV1Beta1Operations;
@@ -114,7 +114,7 @@ public class ResourceOperatorSupplier {
                 new RoleOperator(vertx, client),
                 new ClusterRoleBindingOperator(vertx, client),
                 new NetworkPolicyOperator(vertx, client),
-                new PodDisruptionBudgetOperator(vertx, client),
+                //new PodDisruptionBudgetOperator(vertx, client),
                 new PodOperator(vertx, client),
                 new IngressOperator(vertx, client),
                 new IngressV1Beta1Operator(vertx, client),
@@ -148,7 +148,7 @@ public class ResourceOperatorSupplier {
                                     RoleOperator roleOperations,
                                     ClusterRoleBindingOperator clusterRoleBindingOperator,
                                     NetworkPolicyOperator networkPolicyOperator,
-                                    PodDisruptionBudgetOperator podDisruptionBudgetOperator,
+                                    //PodDisruptionBudgetOperator podDisruptionBudgetOperator,
                                     PodOperator podOperations,
                                     IngressOperator ingressOperations,
                                     IngressV1Beta1Operator ingressV1Beta1Operations,
@@ -180,7 +180,7 @@ public class ResourceOperatorSupplier {
         this.roleOperations = roleOperations;
         this.clusterRoleBindingOperator = clusterRoleBindingOperator;
         this.networkPolicyOperator = networkPolicyOperator;
-        this.podDisruptionBudgetOperator = podDisruptionBudgetOperator;
+        //this.podDisruptionBudgetOperator = podDisruptionBudgetOperator;
         this.kafkaOperator = kafkaOperator;
         this.podOperations = podOperations;
         this.ingressOperations = ingressOperations;
